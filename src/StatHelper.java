@@ -125,7 +125,7 @@ public class StatHelper {
         if (t > tCritical) {
             System.out.println("Тенденция существует");
         } else {
-            System.out.println("Тенденция не существует");
+            System.out.println("Тенденция отсутствует");
         }
 
     }
