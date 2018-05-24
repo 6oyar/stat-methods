@@ -1,4 +1,3 @@
-import javax.swing.text.Document;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -31,25 +30,51 @@ public class Tests {
     public static void userTest() throws IOException {
         System.out.println("Введите временной ряд, каждый уровень ряда с новой строки:");
         double[] data = readAndGetArray();
-        System.out.println("Введите \"y\", если хотите проверить временной ряд на выбросы и скорректировать его, иначе нажмите любую клавишу...");
+        System.out.println("Введите \"y\", если хотите проверить временной ряд на выбросы и скорректировать его, иначе нажмите enter...");
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         if (reader.readLine().equals("y")) {
             data = StatHelper.getIrwinCorrectedData(data);
-            System.out.println("Значения уровней ряда после корректировки:");
-
-            for (int i = 0; i < data.length; i++) {
-                System.out.print(data[i] + " ");
-            }
-            System.out.println();
+//            System.out.println("Значения уровней ряда после корректировки:");
+//
+//            for (int i = 0; i < data.length; i++) {
+//                System.out.print(data[i] + " ");
+//            }
+//            System.out.println();
         }
+
+
+
+        System.out.println("Для проверки гипотезы о наличии тренда нажмите соответствующую методу цифровую клавишу:");
+        System.out.println("1. Метод сравнения средних уровней ряда");
+        System.out.println("2. Метод серий, основанный на медиане выборки");
+        System.out.println("3. Метод восходящих/нисходящих серий");
+
+        String request = reader.readLine();
+        boolean result;
+
+        if (request.equals("1")) {
+            result = StatHelper.comparisonOfTwoMeans(data);
+        } else if (request.equals("2")) {
+            result = StatHelper.seriesOnMedian(data);
+        } else {
+            result = StatHelper.seriesOnAscDesc(data);
+        }
+
+        if (result) {
+            System.out.println("Тренд присутствует");
+        } else {
+            System.out.println("Тренд отсутствует");
+        }
+
+        System.out.println();
 
         System.out.println("Для проведения сглаживания временного ряда нажмите соответствующую методу цифровую клавишу:");
         System.out.println("1. Метод простой скользящей средней");
         System.out.println("2. Метод взвешенной скользящей средней");
         System.out.println("3. Метод экспоненциального сглаживания");
 
-        String request = reader.readLine();
+        request = reader.readLine();
 
         double[] means = new double[data.length];
         if (request.equals("1") || request.equals("2")) {
@@ -64,28 +89,7 @@ public class Tests {
         } else {
             means = StatHelper.exponentialSmoothing(data);
         }
-
-        System.out.println("Для проверки гипотезы о наличии тренда нажмите соответствующую методу цифровую клавишу:");
-        System.out.println("1. Метод сравнения средних уровней ряда");
-        System.out.println("2. Метод серий, основанный на медиане выборки");
-        System.out.println("3. Метод восходящих/нисходящих серий");
-
-        request = reader.readLine();
-        boolean result;
-
-        if (request.equals("1")) {
-            result = StatHelper.comparisonOfTwoMeans(means);
-        } else if (request.equals("2")) {
-            result = StatHelper.seriesOnMedian(means);
-        } else {
-            result = StatHelper.seriesOnAscDesc(means);
-        }
-
-        if (result) {
-            System.out.println("Тренд присутствует");
-        } else {
-            System.out.println("Тренд отсутствует");
-        }
+        System.out.println();
     }
 
     public static void testAll(){

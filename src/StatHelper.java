@@ -1,3 +1,6 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,18 +29,53 @@ public class StatHelper {
 
     //https://math.semestr.ru/trend/irvin.php
     public static double[] getIrwinCorrectedData(double[] data) {
+        double mean = getMeanValue(data);
+        double deviation = getStandardDeviation(data);
         double[] u = new double[data.length];
         double[] lambdas = getIrwinLambdas(data);
-        double lambdaCrit = IrwinTestData.getCriticalValue(data.length);
+        double lambdaCrit = IrwinTestData.getApproxCriticalValue(data.length);
         u[0] = data[0];
-        u[data.length - 1] = data[data.length - 1];
-        for (int i = 1; i < u.length - 1; i++) {
+        //u[data.length - 1] = data[data.length - 1];
+        boolean hasCritLambdas = false;
+        for (int i = 1; i < u.length; i++) {
             if (lambdas[i] > lambdaCrit) {
-                u[i] = (data[i - 1] + data[i + 1] ) / 2;
+                hasCritLambdas = true;
+                System.out.println("Обнаружено аномальное значение: " + data[i] + ", на уровне ряда с номером " + i);
+                System.out.println("Среднее значение ряда: " + mean);
+                System.out.println("Стандартное отклонение ряда: " + deviation);
+
+                BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+                System.out.println("Если хотите скорректировать аномальное значение, введите \"y\", иначе нажмите enter...");
+
+                try {
+                    if (reader.readLine().equals("y")) {
+                        u[i] = (data[i - 1] + data[i + 1] ) / 2;
+                    } else {
+                        u[i] = data[i];
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             } else {
                 u[i] = data[i];
             }
         }
+
+        if (hasCritLambdas) {
+            System.out.println("Значения уровней ряда после корректировки:");
+
+            for (int i = 0; i < u.length; i++) {
+                System.out.print(u[i] + " ");
+            }
+            System.out.println();
+            System.out.println();
+        } else {
+            System.out.println("Аномальные значения отсутствуют");
+            System.out.println();
+        }
+
+
+
         return u;
     }
 
@@ -57,10 +95,32 @@ public class StatHelper {
             u[i] = sum / interval;
         }
 
-        for (int i = 0; i < interval / 2; i++) {
-            u[i] = data[i];
-            u[data.length - 1 - i] = data[data.length - 1 - i];
+//        for (int i = 0; i < interval / 2; i++) {
+//            u[i] = data[i];
+//            u[data.length - 1 - i] = data[data.length - 1 - i];
+//        }
+
+        System.out.println("Сглаженный ряд:");
+
+        for (int i = 0; i < u.length; i++) {
+
+            if ( (i < interval / 2) || ( (data.length - 1 - i) < interval / 2) ) {
+                System.out.print(" * ");
+            } else {
+                System.out.print(u[i] + " ");
+            }
         }
+
+        //Вычисление точности
+        double sum = 0;
+        for (int i = interval / 2; i < data.length - interval / 2; i++) {
+            sum += Math.abs(data[i] - u[i]) * 100.0 / data[i];
+        }
+        sum = 1.0/(data.length - interval + 1) * sum;
+
+        System.out.println();
+        printAccuracyResult(sum);
+
         return u;
     }
 
@@ -128,22 +188,65 @@ public class StatHelper {
             u[i] = data[i];
             u[data.length - 1 - i] = data[data.length - 1 - i];
         }
+
+        System.out.println("Сглаженный ряд:");
+
+        for (int i = 0; i < u.length; i++) {
+
+            if ( (i < interval / 2) || ( (data.length - 1 - i) < interval / 2) ) {
+                System.out.print(" * ");
+            } else {
+                System.out.print(u[i] + " ");
+            }
+        }
+
+        //Вычисление точности
+        double sum = 0;
+        for (int i = interval / 2; i < data.length - interval / 2; i++) {
+            sum += Math.abs(data[i] - u[i]) * 100.0 / data[i];
+        }
+        sum = 1.0/(data.length - interval + 1) * sum;
+
+        System.out.println();
+        printAccuracyResult(sum);
+
         return u;
     }
 
 
     public static double[] exponentialSmoothing(double []data) {
-        double alpha = 2.0 / (data.length + 1);
+        double alpha = 2.0 / (data.length);
         double[] u = new double[data.length];
 
+        System.out.println("Выберите способ определения U0:");
+        System.out.println("1. Среднее арифметическое ряда");
+        System.out.println("2. Первое значение ряда");
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+        try {
+            if (reader.readLine().equals("1")) {
+                u[0] = getMeanValue(data);
+            } else {
+                u[0] = data[0];
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         //u0 считаем как среднее арифметическое
-        u[0] = getMeanValue(data);
+        //u[0] = getMeanValue(data);
+        //u[0] = data[0];
 
         for (int i = 1; i < data.length; i++) {
             u[i] = alpha * data[i - 1] + (1 - alpha) * u[i - 1];
         }
 
-        //System.out.println("Прогнозируемое значение u = " + u[data.length]);
+        System.out.println("Сглаженный ряд:");
+
+        for (int i = 0; i < u.length; i++) {
+                System.out.print(u[i] + " ");
+        }
+
 
         //Вычисление точности
         double sum = 0;
@@ -151,7 +254,9 @@ public class StatHelper {
             sum += Math.abs(data[i] - u[i]) * 100.0 / data[i];
         }
         sum = 1.0/data.length * sum;
-        //printAccuracyResult(sum);
+
+        System.out.println();
+        printAccuracyResult(sum);
 
         return u;
     }
@@ -254,7 +359,7 @@ public class StatHelper {
         int v = params[0];
         int t = params[1];
 
-//alpha == 0.05
+        //alpha == 0.05
         int tCrit;
         if (data.length < 26) {
             tCrit = 5;
@@ -336,14 +441,17 @@ public class StatHelper {
     private static void printAccuracyResult(double a) {
         //String formattedA = String.format("%.2f", a);
         String formattedA = new DecimalFormat("#0.00").format(a);
+        System.out.print("Точность ");
         if (a < 10.0) {
-            System.out.println("Точность прогноза высокая, с относительной ошибкой: \u03b5 \u2248 " + formattedA + "%");
+            System.out.print("высокая");
         } else if (a >= 10.0 && a < 20.0) {
-            System.out.println("Точность прогноза хорошая, с относительной ошибкой: \u03b5 \u2248 " + formattedA + "%");
+            System.out.print("хорошая");
         } else if (a >= 20.0 && a < 50.0) {
-            System.out.println("Точность прогноза удовлетворительная, с относительной ошибкой: \u03b5 \u2248 " + formattedA + "%");
+            System.out.print("удовлетворительная");
         } else {
-            System.out.println("Точность прогноза неудовлетворительная, с относительной ошибкой: \u03b5 \u2248 " + formattedA + "%");
+            System.out.print("неудовлетворительная");
         }
+
+        System.out.println(", с относительной ошибкой: \u03b5 \u2248 " + formattedA + "%");
     }
 }

@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86355c5f-60e4-44a5-8545-05ec73fe353e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/math-stat/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/math-stat/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/math-stat/StatHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/math-stat/StatHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/math-stat/Tests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/math-stat/Tests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IrwinTestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IrwinTestData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/StatHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StatHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests.java" afterDir="false" />
@@ -23,8 +20,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="14" selection-start-line="14" selection-start-column="2" selection-end-line="23" selection-end-column="7" />
+            <state relative-caret-position="238">
+              <caret line="35" selection-start-line="35" selection-start-column="2" selection-end-line="44" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -32,10 +29,11 @@
       <file leaf-file-name="Tests.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Tests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+            <state relative-caret-position="280">
+              <caret line="89" column="43" selection-start-line="89" selection-start-column="43" selection-end-line="89" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#readAndGetArray#0;class#Tests#0" />
               </folding>
             </state>
           </provider>
@@ -44,15 +42,14 @@
       <file leaf-file-name="StatHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/StatHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="815">
-              <caret line="238" column="39" selection-start-line="238" selection-start-column="6" selection-end-line="238" selection-end-column="39" />
+            <state relative-caret-position="253">
+              <caret line="443" column="35" selection-start-line="443" selection-start-column="35" selection-end-line="443" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;method#getIrwinLambdas#0;class#StatHelper#0" />
                 <element signature="method#getIrwinLambdas#0;class#StatHelper#0" />
-                <element signature="method#getIrwinCorrectedData#0;class#StatHelper#0" />
-                <element signature="e#4297#4378#0" />
                 <element signature="method#comparisonOfTwoMeans#0;class#StatHelper#0" />
+                <element signature="method#seriesOnAscDesc#0;class#StatHelper#0" />
                 <element signature="docComment;method#getStandardDeviation#0;class#StatHelper#0" />
                 <element signature="method#getStandardDeviation#0;class#StatHelper#0" />
                 <element signature="docComment;method#getMeanValue#0;class#StatHelper#0" />
@@ -60,7 +57,6 @@
                 <element signature="docComment;method#fischerTest#0;class#StatHelper#0" />
                 <element signature="method#fischerTest#0;class#StatHelper#0" />
                 <element signature="method#getVandT#0;class#StatHelper#0" />
-                <element signature="method#printAccuracyResult#0;class#StatHelper#0" />
               </folding>
             </state>
           </provider>
@@ -79,6 +75,7 @@
     <findStrings>
       <find>hashset</find>
       <find>get</find>
+      <find>printac</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -96,11 +93,11 @@
       <list>
         <option value="$PROJECT_DIR$/src/StudentTestData.java" />
         <option value="$PROJECT_DIR$/src/FischerTestData.java" />
-        <option value="$PROJECT_DIR$/src/IrwinTestData.java" />
         <option value="$PROJECT_DIR$/src/Test.java" />
-        <option value="$PROJECT_DIR$/src/StatHelper.java" />
+        <option value="$PROJECT_DIR$/src/IrwinTestData.java" />
         <option value="$PROJECT_DIR$/src/Tests.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/StatHelper.java" />
       </list>
     </option>
   </component>
@@ -110,9 +107,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="716" />
-    <option name="y" value="-16" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="715" />
+    <option name="y" value="-13" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -122,7 +119,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -139,8 +135,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -233,11 +230,12 @@
       <workItem from="1526320058472" duration="697000" />
       <workItem from="1526805077406" duration="31000" />
       <workItem from="1526891217526" duration="20592000" />
+      <workItem from="1527155130951" duration="11123000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42322000" />
+    <option name="totallyTimeSpent" value="53445000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -251,19 +249,19 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3278867" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.23311546" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3278867" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18923241" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.392779" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3583878" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3583878" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -284,27 +282,60 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/StatHelper.java</url>
-          <line>63</line>
+          <line>123</line>
           <properties />
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/StatHelper.java</url>
-          <line>130</line>
+          <line>212</line>
           <properties />
           <option name="timeStamp" value="26" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/StatHelper.java</url>
-          <line>155</line>
-          <properties />
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="28" />
+      <option name="time" value="30" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-start-column="2" selection-end-line="23" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1394">
+          <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#readAndGetArray#0;class#Tests#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StatHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4046">
+          <caret line="238" column="39" selection-start-line="238" selection-start-column="6" selection-end-line="238" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#getIrwinLambdas#0;class#StatHelper#0" />
+            <element signature="method#getIrwinLambdas#0;class#StatHelper#0" />
+            <element signature="method#comparisonOfTwoMeans#0;class#StatHelper#0" />
+            <element signature="method#seriesOnAscDesc#0;class#StatHelper#0" />
+            <element signature="docComment;method#getStandardDeviation#0;class#StatHelper#0" />
+            <element signature="method#getStandardDeviation#0;class#StatHelper#0" />
+            <element signature="docComment;method#getMeanValue#0;class#StatHelper#0" />
+            <element signature="method#getMeanValue#0;class#StatHelper#0" />
+            <element signature="docComment;method#fischerTest#0;class#StatHelper#0" />
+            <element signature="method#fischerTest#0;class#StatHelper#0" />
+            <element signature="method#getVandT#0;class#StatHelper#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -318,6 +349,7 @@
           <caret line="68" column="53" selection-start-line="68" selection-start-column="53" selection-end-line="68" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#readAndGetArray#0;class#Tests#0" />
           </folding>
         </state>
       </provider>
@@ -330,9 +362,8 @@
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#getIrwinLambdas#0;class#StatHelper#0" />
             <element signature="method#getIrwinLambdas#0;class#StatHelper#0" />
-            <element signature="method#getIrwinCorrectedData#0;class#StatHelper#0" />
-            <element signature="e#4297#4378#0" />
             <element signature="method#comparisonOfTwoMeans#0;class#StatHelper#0" />
+            <element signature="method#seriesOnAscDesc#0;class#StatHelper#0" />
             <element signature="docComment;method#getStandardDeviation#0;class#StatHelper#0" />
             <element signature="method#getStandardDeviation#0;class#StatHelper#0" />
             <element signature="docComment;method#getMeanValue#0;class#StatHelper#0" />
@@ -340,7 +371,6 @@
             <element signature="docComment;method#fischerTest#0;class#StatHelper#0" />
             <element signature="method#fischerTest#0;class#StatHelper#0" />
             <element signature="method#getVandT#0;class#StatHelper#0" />
-            <element signature="method#printAccuracyResult#0;class#StatHelper#0" />
           </folding>
         </state>
       </provider>
@@ -388,9 +418,8 @@
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#getIrwinLambdas#0;class#StatHelper#0" />
             <element signature="method#getIrwinLambdas#0;class#StatHelper#0" />
-            <element signature="method#getIrwinCorrectedData#0;class#StatHelper#0" />
-            <element signature="e#4297#4378#0" />
             <element signature="method#comparisonOfTwoMeans#0;class#StatHelper#0" />
+            <element signature="method#seriesOnAscDesc#0;class#StatHelper#0" />
             <element signature="docComment;method#getStandardDeviation#0;class#StatHelper#0" />
             <element signature="method#getStandardDeviation#0;class#StatHelper#0" />
             <element signature="docComment;method#getMeanValue#0;class#StatHelper#0" />
@@ -398,7 +427,6 @@
             <element signature="docComment;method#fischerTest#0;class#StatHelper#0" />
             <element signature="method#fischerTest#0;class#StatHelper#0" />
             <element signature="method#getVandT#0;class#StatHelper#0" />
-            <element signature="method#printAccuracyResult#0;class#StatHelper#0" />
           </folding>
         </state>
       </provider>
@@ -439,9 +467,8 @@
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#getIrwinLambdas#0;class#StatHelper#0" />
             <element signature="method#getIrwinLambdas#0;class#StatHelper#0" />
-            <element signature="method#getIrwinCorrectedData#0;class#StatHelper#0" />
-            <element signature="e#4297#4378#0" />
             <element signature="method#comparisonOfTwoMeans#0;class#StatHelper#0" />
+            <element signature="method#seriesOnAscDesc#0;class#StatHelper#0" />
             <element signature="docComment;method#getStandardDeviation#0;class#StatHelper#0" />
             <element signature="method#getStandardDeviation#0;class#StatHelper#0" />
             <element signature="docComment;method#getMeanValue#0;class#StatHelper#0" />
@@ -449,7 +476,6 @@
             <element signature="docComment;method#fischerTest#0;class#StatHelper#0" />
             <element signature="method#fischerTest#0;class#StatHelper#0" />
             <element signature="method#getVandT#0;class#StatHelper#0" />
-            <element signature="method#printAccuracyResult#0;class#StatHelper#0" />
           </folding>
         </state>
       </provider>
@@ -469,9 +495,8 @@
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#getIrwinLambdas#0;class#StatHelper#0" />
             <element signature="method#getIrwinLambdas#0;class#StatHelper#0" />
-            <element signature="method#getIrwinCorrectedData#0;class#StatHelper#0" />
-            <element signature="e#4297#4378#0" />
             <element signature="method#comparisonOfTwoMeans#0;class#StatHelper#0" />
+            <element signature="method#seriesOnAscDesc#0;class#StatHelper#0" />
             <element signature="docComment;method#getStandardDeviation#0;class#StatHelper#0" />
             <element signature="method#getStandardDeviation#0;class#StatHelper#0" />
             <element signature="docComment;method#getMeanValue#0;class#StatHelper#0" />
@@ -479,7 +504,6 @@
             <element signature="docComment;method#fischerTest#0;class#StatHelper#0" />
             <element signature="method#fischerTest#0;class#StatHelper#0" />
             <element signature="method#getVandT#0;class#StatHelper#0" />
-            <element signature="method#printAccuracyResult#0;class#StatHelper#0" />
           </folding>
         </state>
       </provider>
@@ -499,9 +523,8 @@
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#getIrwinLambdas#0;class#StatHelper#0" />
             <element signature="method#getIrwinLambdas#0;class#StatHelper#0" />
-            <element signature="method#getIrwinCorrectedData#0;class#StatHelper#0" />
-            <element signature="e#4297#4378#0" />
             <element signature="method#comparisonOfTwoMeans#0;class#StatHelper#0" />
+            <element signature="method#seriesOnAscDesc#0;class#StatHelper#0" />
             <element signature="docComment;method#getStandardDeviation#0;class#StatHelper#0" />
             <element signature="method#getStandardDeviation#0;class#StatHelper#0" />
             <element signature="docComment;method#getMeanValue#0;class#StatHelper#0" />
@@ -509,7 +532,6 @@
             <element signature="docComment;method#fischerTest#0;class#StatHelper#0" />
             <element signature="method#fischerTest#0;class#StatHelper#0" />
             <element signature="method#getVandT#0;class#StatHelper#0" />
-            <element signature="method#printAccuracyResult#0;class#StatHelper#0" />
           </folding>
         </state>
       </provider>
@@ -571,9 +593,8 @@
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#getIrwinLambdas#0;class#StatHelper#0" />
             <element signature="method#getIrwinLambdas#0;class#StatHelper#0" />
-            <element signature="method#getIrwinCorrectedData#0;class#StatHelper#0" />
-            <element signature="e#4297#4378#0" />
             <element signature="method#comparisonOfTwoMeans#0;class#StatHelper#0" />
+            <element signature="method#seriesOnAscDesc#0;class#StatHelper#0" />
             <element signature="docComment;method#getStandardDeviation#0;class#StatHelper#0" />
             <element signature="method#getStandardDeviation#0;class#StatHelper#0" />
             <element signature="docComment;method#getMeanValue#0;class#StatHelper#0" />
@@ -581,7 +602,6 @@
             <element signature="docComment;method#fischerTest#0;class#StatHelper#0" />
             <element signature="method#fischerTest#0;class#StatHelper#0" />
             <element signature="method#getVandT#0;class#StatHelper#0" />
-            <element signature="method#printAccuracyResult#0;class#StatHelper#0" />
           </folding>
         </state>
       </provider>
@@ -601,9 +621,8 @@
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#getIrwinLambdas#0;class#StatHelper#0" />
             <element signature="method#getIrwinLambdas#0;class#StatHelper#0" />
-            <element signature="method#getIrwinCorrectedData#0;class#StatHelper#0" />
-            <element signature="e#4297#4378#0" />
             <element signature="method#comparisonOfTwoMeans#0;class#StatHelper#0" />
+            <element signature="method#seriesOnAscDesc#0;class#StatHelper#0" />
             <element signature="docComment;method#getStandardDeviation#0;class#StatHelper#0" />
             <element signature="method#getStandardDeviation#0;class#StatHelper#0" />
             <element signature="docComment;method#getMeanValue#0;class#StatHelper#0" />
@@ -611,7 +630,6 @@
             <element signature="docComment;method#fischerTest#0;class#StatHelper#0" />
             <element signature="method#fischerTest#0;class#StatHelper#0" />
             <element signature="method#getVandT#0;class#StatHelper#0" />
-            <element signature="method#printAccuracyResult#0;class#StatHelper#0" />
           </folding>
         </state>
       </provider>
@@ -631,9 +649,8 @@
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#getIrwinLambdas#0;class#StatHelper#0" />
             <element signature="method#getIrwinLambdas#0;class#StatHelper#0" />
-            <element signature="method#getIrwinCorrectedData#0;class#StatHelper#0" />
-            <element signature="e#4297#4378#0" />
             <element signature="method#comparisonOfTwoMeans#0;class#StatHelper#0" />
+            <element signature="method#seriesOnAscDesc#0;class#StatHelper#0" />
             <element signature="docComment;method#getStandardDeviation#0;class#StatHelper#0" />
             <element signature="method#getStandardDeviation#0;class#StatHelper#0" />
             <element signature="docComment;method#getMeanValue#0;class#StatHelper#0" />
@@ -641,7 +658,6 @@
             <element signature="docComment;method#fischerTest#0;class#StatHelper#0" />
             <element signature="method#fischerTest#0;class#StatHelper#0" />
             <element signature="method#getVandT#0;class#StatHelper#0" />
-            <element signature="method#printAccuracyResult#0;class#StatHelper#0" />
           </folding>
         </state>
       </provider>
@@ -661,9 +677,8 @@
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#getIrwinLambdas#0;class#StatHelper#0" />
             <element signature="method#getIrwinLambdas#0;class#StatHelper#0" />
-            <element signature="method#getIrwinCorrectedData#0;class#StatHelper#0" />
-            <element signature="e#4297#4378#0" />
             <element signature="method#comparisonOfTwoMeans#0;class#StatHelper#0" />
+            <element signature="method#seriesOnAscDesc#0;class#StatHelper#0" />
             <element signature="docComment;method#getStandardDeviation#0;class#StatHelper#0" />
             <element signature="method#getStandardDeviation#0;class#StatHelper#0" />
             <element signature="docComment;method#getMeanValue#0;class#StatHelper#0" />
@@ -671,7 +686,6 @@
             <element signature="docComment;method#fischerTest#0;class#StatHelper#0" />
             <element signature="method#fischerTest#0;class#StatHelper#0" />
             <element signature="method#getVandT#0;class#StatHelper#0" />
-            <element signature="method#printAccuracyResult#0;class#StatHelper#0" />
           </folding>
         </state>
       </provider>
@@ -712,13 +726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/IrwinTestData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="46" lean-forward="true" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/StudentTestData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -729,17 +736,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/IrwinTestData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="24" column="35" lean-forward="true" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+          <folding>
+            <element signature="e#509#510#0" expanded="true" />
+            <element signature="e#540#541#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="89" column="43" selection-start-line="89" selection-start-column="43" selection-end-line="89" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#readAndGetArray#0;class#Tests#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/StatHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="815">
-          <caret line="238" column="39" selection-start-line="238" selection-start-column="6" selection-end-line="238" selection-end-column="39" />
+        <state relative-caret-position="253">
+          <caret line="443" column="35" selection-start-line="443" selection-start-column="35" selection-end-line="443" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#getIrwinLambdas#0;class#StatHelper#0" />
             <element signature="method#getIrwinLambdas#0;class#StatHelper#0" />
-            <element signature="method#getIrwinCorrectedData#0;class#StatHelper#0" />
-            <element signature="e#4297#4378#0" />
             <element signature="method#comparisonOfTwoMeans#0;class#StatHelper#0" />
+            <element signature="method#seriesOnAscDesc#0;class#StatHelper#0" />
             <element signature="docComment;method#getStandardDeviation#0;class#StatHelper#0" />
             <element signature="method#getStandardDeviation#0;class#StatHelper#0" />
             <element signature="docComment;method#getMeanValue#0;class#StatHelper#0" />
@@ -747,25 +775,14 @@
             <element signature="docComment;method#fischerTest#0;class#StatHelper#0" />
             <element signature="method#fischerTest#0;class#StatHelper#0" />
             <element signature="method#getVandT#0;class#StatHelper#0" />
-            <element signature="method#printAccuracyResult#0;class#StatHelper#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="14" selection-start-line="14" selection-start-column="2" selection-end-line="23" selection-end-column="7" />
+        <state relative-caret-position="238">
+          <caret line="35" selection-start-line="35" selection-start-column="2" selection-end-line="44" selection-end-column="6" />
         </state>
       </provider>
     </entry>
